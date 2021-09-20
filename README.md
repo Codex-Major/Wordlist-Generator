@@ -1,4 +1,4 @@
-# CODEX - WORDLISTGEN
+# Codex - Wordlist Generator
 
 All you'll need is codex_v1.0.py and DICTIONARY.json to get started!
 

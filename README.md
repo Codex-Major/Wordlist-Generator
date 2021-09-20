@@ -55,7 +55,7 @@ This python tool is capable of creating massive wordlists, and expanding its own
                 [?] Unacceptable Symbols: \ and "
                 
 ------------------------------------------------------------------------------------
-[*] Args:| {this will change as more lists are added to DICTIONARY.json} |
+        [*] Args:| {this will change as more lists are added to DICTIONARY.json} |
 
             [*] color - I.e. ["red", "yellow", "blue"]
 
@@ -77,7 +77,7 @@ This python tool is capable of creating massive wordlists, and expanding its own
             [*] formnumber4 - I.e. [0000, 0001, 0002, 0003]
             (and so on... 9 max.)
 
-[?] E.g.:\n 
+        [?] E.g.:\n 
             [?] color:animal:formnumber3  - #1,646,352 words.
                 [*]Writes things like: redshark001 or greentiger999.
 

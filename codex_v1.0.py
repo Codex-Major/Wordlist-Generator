@@ -3,9 +3,7 @@ from itertools import product
 import platform
 import sys
 import os
-##from threading import Thread
-##threads = {}
-
+####################################################################
 DICTIONARY = open('DICTIONARY.json')
 words = json.load(DICTIONARY)
 wtypes=""
@@ -15,7 +13,7 @@ newF = None
 rdF = None
 Lin = None
 rng = 1000
-
+####################################################################
 def setnums():
     words["number"]=["placeholder"]
     words["formnumber2"]=["placeholder"]
@@ -26,7 +24,6 @@ def setnums():
     words["formnumber7"]=["placeholder"]
     words["formnumber8"]=["placeholder"]
     words["formnumber9"]=["placeholder"]
-
 words["number"]=[str(i) for i in range(rng)]
 words["formnumber2"]=['{:>02d}'.format(i) for i in range(rng)]
 words["formnumber3"]=['{:>03d}'.format(i) for i in range(rng)]
@@ -36,13 +33,11 @@ words["formnumber6"]=['{:>06d}'.format(i) for i in range(rng)]
 words["formnumber7"]=['{:>07d}'.format(i) for i in range(rng)]
 words["formnumber8"]=['{:>08d}'.format(i) for i in range(rng)]
 words["formnumber9"]=['{:>09d}'.format(i) for i in range(rng)]
-
 if platform.system() == 'Windows':
     clr = lambda: os.system('cls')
     os.system('color 04')
 elif platform.system() == 'Linux':
     clr = lambda: os.system('clear')
-
 def bnrO():
     sys.stdout.write("""
              
@@ -70,11 +65,7 @@ def bnrC():
      |____|      ()_________)
 
 __________________________________________codex.py__
-""")
-    
-
-
-    
+""")  
 def mnu():
     sys.stdout.write("""
 ____________________________________________________
@@ -94,8 +85,6 @@ ____________________________________________________
 
     (e)xit - Exits this tool.
     """)
-
-
 def clihlp():
     sys.stdout.write("""
 [?] Commands:\n
@@ -148,9 +137,6 @@ def clihlp():
                 [?] Unacceptable Symbols: \\ and "
                                     
 """)
-
-
-
 def hlp():
     sys.stdout.write("""
 ____________________________________________________
@@ -196,7 +182,6 @@ ____________________________________________________
             [?] :formnumber9: - will write nine decimals: 000000001
             
 """.format(wtypes))
-
 def wrt():
     sys.stdout.write("[!] Writing a new file!\n")
     sys.stdout.write("""
@@ -224,11 +209,6 @@ ____________________________________________________
     if ans=="n" or ans=="no":
         sys.stdout.write("[!] Exiting!")
         ext()
-
-
-
-
-
 def chk():
     sys.stdout.write("[?] Would you like to check for... \n    (b)adlines or (e)xisting words?\n")
     sys.stdout.write("\n[!] Be sure to check for badlines BEFORE checking for existing words.\n")
@@ -243,7 +223,6 @@ def chk():
         lcount=0
         bcount=0
         blines=[]
-
         for word in words[wt]:
             for line in Lines:
                 lcount+=1
@@ -266,10 +245,7 @@ def chk():
             fileOut=rdF
             with open(fileOut, 'wt') as f_out:
                 for i in blines:
-                    #print(i)
-                    #print(Lines[i-1])
                     del Lines[i-1]
-
                 for line in Lines:
                     f_out.write(line)
                 sys.stdout.write("[*] All done!\n")
@@ -279,14 +255,8 @@ def chk():
                     chk()
                 if ans1=="n":
                     mnu()
-
         if ans=='n':
             ext()
-
-        #sys.stdout.write("[!] Not an existing wordtype! Just be sure to (c)heck for bad(l)ines")
-        #chk()
-
-
     def badlines():
         rdF = input("[->] File to read -> ")
         fileIn = open(rdF, 'r')
@@ -295,7 +265,6 @@ def chk():
         bcount=0
         for line in Lines:
             lcount+=1
-            #sys.stdout.write("Line{}: {}".format(lcount, line))
             if "\\" in line or '"' in line:
                 bcount+=1
         sys.stdout.write("[!] Found {} BAD lines out of {} lines!\n".format(bcount,lcount))
@@ -312,7 +281,6 @@ def chk():
                         nstr = ostr
                         for c in symbols:
                             nstr = nstr.replace(c,"")
-                        #print(nstr)
                         print(''.join(nstr.strip("\n")), file=f_out)
                 sys.stdout.write("[!] Fixed {} bad lines out of {} lines.\n".format(bcount,lcount))
             if ans == "n":
@@ -333,10 +301,8 @@ def chk():
         badlines()
     if check=='e':
         existing()
-    
     sys.stdout.write("[!] No such check command!\n")
     chk()
-
 def add():
     sys.stdout.write("[*] Adding some new words...\n")
     sys.stdout.write("[!] Please make certain you (c)heck your wordlist!\n   This will remove any existing words or words that might not be suitable.\n")
@@ -367,8 +333,6 @@ def add():
             else:
                 sys.stderr.write("\n[?] Umm. Not too sure what you meant. Heading back to the menu...")
                 mnu()
-
-    
     if wtc==0:
         sys.stderr.write("\n[*] '{}' is NOT an existing wordtype!\n".format(wt))
         sys.stdout.write("[!] Are you sure you want to create a new wordtype?\n")
@@ -395,10 +359,6 @@ def add():
                 mnu()
         if ans=='n':
             mnu()
-
-
-
-
 def ext():
     if not newF == None:
         newF.close()
@@ -425,7 +385,6 @@ def lin():
             clr()
             sys.stderr.write("[!] Ctrl+C Interrupt.\n")
             ext()
-
     if "help" in Lin or Lin == 'h':
         try:
             clr()
@@ -436,7 +395,6 @@ def lin():
             clr()
             sys.stderr.write("[!] Ctrl+C Interrupt.\n")
             ext()
-
     if "menu" in Lin or Lin == 'm':
         try:
             clr()
@@ -447,7 +405,6 @@ def lin():
             clr()
             sys.stderr.write("[!] Ctrl+C Interrupt.\n")
             ext()
-
     if "banner" in Lin or Lin == 'b':
         try:
             clr()
@@ -457,7 +414,6 @@ def lin():
             clr()
             sys.stderr.write("[!] Ctrl+C Interrupt.\n")
             ext()
-            
     if "add" in Lin or Lin == 'a':
         try:
             clr()
@@ -467,7 +423,6 @@ def lin():
             clr()
             sys.stderr.write("[!] Ctrl+C Interrupt.\n")
             ext()
-
     if "check" in Lin or Lin == 'c':
         try:
             clr()
@@ -477,7 +432,6 @@ def lin():
             clr()
             sys.stderr.write("[!] Ctrl+C Interrupt.\n")
             ext()
-
     if "exit" in Lin or Lin == 'e' or Lin == 'x':
         try:
             clr()
@@ -486,15 +440,11 @@ def lin():
             clr()
             sys.stderr.write("[!] Ctrl+C Interrupt.\n")
             ext()
-
-
-
     else:
         clr()
         sys.stderr.write("[!] No such command.\n")
         mnu()
         lin()
-
 ##################################################################################
 if __name__ == "__main__":
     try:
@@ -505,42 +455,30 @@ if __name__ == "__main__":
                     if "-r" in cmdargs[0:]:
                          rng = input("[->] Set integer's max (Default=1000)-> ")
                     print(cmdargs)
-
                     print(cmdargs.index("-w"))
                     widx = cmdargs.index("-w")
-
                     print(cmdargs[widx+1])
                     newF = cmdargs[widx+1]
-
                     print(cmdargs[widx+2])
                     arg1, arg2, arg3 = cmdargs[widx+2].split(":")
                     print(arg1)
                     print(arg2)
                     print(arg3)
-
                     with open(newF, 'w') as f_out:
                         sys.stdout.write("[*] Please wait while I write in {}.\n".format(newF))
                         for c in product(words[arg1],words[arg2],words[arg3]):
                             print(''.join(c), file=f_out)
                     sys.stdout.write("[*] All finished!\n")
                     newF.close()
-
-
-                    
                 except KeyError:
                     sys.stderr.write("[!] No list for one or more of the defined wordtypes.\n")
                     clr()
-            
             if "-h" in cmdargs[0:]:
                 clr()
                 clihlp()
-
             if "-a" in cmdargs[0:]:
                 clr()
                 add()
-
-            
-
         else:
             clr()
             bnrO()

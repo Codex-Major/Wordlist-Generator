@@ -1,6 +1,6 @@
-# WordlistGen.py
+# CODEX - WORDLISTGEN
 
-This python tool is capable of creating massive wordlists, and expanding its own vocabulary with other wordlists.
+All you'll need is codex_v1.0.py and DICTIONARY.json to get started!
 
 **Command line usage WIP.
 

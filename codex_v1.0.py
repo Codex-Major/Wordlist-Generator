@@ -142,7 +142,7 @@ def clihlp():
                     -a nouns.txt nouns
 
 ------------------------------------------------------------------------------------
-        (-c)heck | Checks a file for acceptability and removes bad .
+        (-c)heck | Checks a file for words with unacceptable symbols and existing words.
 
             [!] Acceptable wordlists contain a single word in each line with no symbols.
                 [?] Unacceptable Symbols: \\ and "

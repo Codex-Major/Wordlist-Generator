@@ -53,3 +53,45 @@ This python tool is capable of creating massive wordlists, and expanding its own
 
             [!] Acceptable wordlists contain a single word in each line with no symbols.
                 [?] Unacceptable Symbols: \ and "
+                
+------------------------------------------------------------------------------------
+[*] Args:| {this will change as more lists are added to DICTIONARY.json} |
+
+            [*] color - I.e. ["red", "yellow", "blue"]
+
+            [*] adjective - I.e. ["small", "shiny", "pretty"]
+
+            [*] animal - I.e. ["cat", "dog", "fish"]
+
+            [*] noun - I.e ["banana", "race", "car"]
+
+            [*] verb - I.e. ["jump", "run", "swim"]
+                [*] "ing" is added to the end of most verbs
+
+            [*] number - I.e. [""]
+
+            [*] formnumber2 - I.e. [00, 01, 02, 03]
+
+            [*] formnumber3 - I.e. [000, 001, 002, 003]
+            
+            [*] formnumber4 - I.e. [0000, 0001, 0002, 0003]
+            (and so on... 9 max.)
+
+[?] E.g.:\n 
+            [?] color:animal:formnumber3  - #1,646,352 words.
+                [*]Writes things like: redshark001 or greentiger999.
+
+            [?] noun:noun:formnumber2  - #22,498,789 words.
+                [*]Writes things like: roomservice02 or waterdamage999.
+
+            [?] adj:noun:number  - #256,383,360 words.
+                [*]Writes things like: poisonapple2 or ancientpalace123.
+
+            [?] :number: will write one decimal: 1 ;
+
+            [?] :formnumber2: - will write two decimals: 01 ;
+
+            [?] :formnumber4: - #9999 integers.
+                [*] Writes four-digit pins.
+
+            [?] :formnumber9: - will write nine decimals: 000000001

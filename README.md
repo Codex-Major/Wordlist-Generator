@@ -2,7 +2,10 @@
 
 All you'll need is codex_v1.0.py and DICTIONARY.json to get started!
 
+
+
 **Command line usage WIP.
+**Currently only allows for concatenation of three args. WIP will make it flexible.
 
 [?] Commands:
 

@@ -1,13 +1,13 @@
 # Codex - Wordlist Generator
-
-All you'll need is codex_v1.0.py and DICTIONARY.json to get started!
+# Install:
+    git clone http://www.github.com/codex-Major/Wordlist-Generator
 
 <a href="https://www.buymeacoffee.com/CodexMajor" target="_blank" style="display: inline-block;"><img src="https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg?style=flat-square" align="center"/></a>
 
 **Command line usage WIP.
 **Currently only allows for concatenation of three args. WIP will make it flexible.
 
-[?] Commands:
+# Commands:
 
         (-h)elp | Gives this output.
 ------------------------------------------------------------------------------------

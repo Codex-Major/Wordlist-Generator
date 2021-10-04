@@ -7,6 +7,7 @@
 **Command line usage WIP.
 **Currently only allows for concatenation of three args. WIP will make it flexible.
 
+    Run as: python3 codex_v1.0.py
 # Commands:
 
         (-h)elp | Gives this output.

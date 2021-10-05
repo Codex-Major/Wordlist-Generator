@@ -1,4 +1,6 @@
 # Codex - Wordlist Generator
+   Please let me know what you think!
+    https://github.com/Codex-Major/Wordlist-Generator/discussions
 # Install:
     git clone http://www.github.com/codex-Major/Wordlist-Generator
 

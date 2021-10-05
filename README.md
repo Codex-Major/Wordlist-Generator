@@ -4,13 +4,21 @@
 
 <a href="https://www.buymeacoffee.com/CodexMajor" target="_blank" style="display: inline-block;"><img src="https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg?style=flat-square" align="center"/></a>
 
-**Command line usage WIP.
-**Currently only allows for concatenation of three args. WIP will make it flexible.
+Run as: `python3 codex_v1.2.py`
 
-    Run as: python3 codex_v1.0.py
+Common usage:
+
+    python3 codex_vX.X.py -c colors.txt -t color -r -of modifiedColors.txt
+
+    python3 codex_vX.X.py -w number -of pins.txt -rng 1000
+
+    python3 codex_vX.X.py -w formnumber9 -of longNums.txt
+
+
 # Commands:
 
-        (-h)elp | Gives this output.
+(-h)elp | Gives this output.
+
 ------------------------------------------------------------------------------------
         (-w)rite | Writes a new File with the specified wordtypes.
             
@@ -99,3 +107,10 @@
                 [*] Writes four-digit pins.
 
             [?] :formnumber9: - will write nine decimals: 000000001
+------------------------------------------------------------------------------------
+Inside your CONF.json file are three things... verbose, prettify_json, and symbols.
+    
+    Verbose - If "True", adds verbosity to the program. If "False", disables alot of the chatter.
+    Prettify - If "True", allows for much easier navigation and reading of your DICTIONARY.json.
+    Symbols - *WIP
+    

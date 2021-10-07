@@ -10,11 +10,11 @@ Run as: `python3 codex.py`
 
 # Common usage:
 
-    python3 codex_vX.X.py -c colors.txt -t color -r -of modifiedColors.txt
+    python3 codex.py -c colors.txt -t color -r -of modifiedColors.txt
 
-    python3 codex_vX.X.py -w number -of pins.txt -rng 1000
+    python3 codex.py -w number -of pins.txt -rng 1000
 
-    python3 codex_vX.X.py -w formnumber9 -of longNums.txt
+    python3 codex.py -w formnumber9 -of longNums.txt
 
 ------------------------------------------------------------------------------------
 

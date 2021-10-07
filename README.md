@@ -32,7 +32,6 @@ Run as: `python3 codex.py`
 
 (-h)elp | Gives this output.
 
-------------------------------------------------------------------------------------
         (-w)rite | Writes a new File with the specified wordtypes.
             
             [?] If no path is given, the new text file is created in the same

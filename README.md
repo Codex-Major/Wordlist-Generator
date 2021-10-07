@@ -121,9 +121,3 @@ Run as: `python3 codex.py`
 
             [?] :formnumber9: - will write nine decimals: 000000001
 ------------------------------------------------------------------------------------
-Inside your CONF.json file are three things... verbose, prettify_json, and symbols.
-    
-    Verbose - If "True", adds verbosity to the program. If "False", disables alot of the chatter.
-    Prettify - If "True", allows for much easier navigation and reading of your DICTIONARY.json.
-    Symbols - *WIP
-    

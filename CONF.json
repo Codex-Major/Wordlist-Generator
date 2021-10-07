@@ -1,3 +1,4 @@
 {
-	"prettify_json":"True"
+	"prettify_json":"True",
+	"verbose":"True"
 }

@@ -3,10 +3,14 @@
     https://github.com/Codex-Major/Wordlist-Generator/discussions
 # Install:
     git clone http://www.github.com/codex-Major/Wordlist-Generator
+    cd Wordlist-Generator
+    python3 codex.py
+
+# New things
+  1. You may now supply more than three wordtypes for concatenation.
+  2. Full CLI Usage.
 
 <a href="https://www.buymeacoffee.com/CodexMajor" target="_blank" style="display: inline-block;"><img src="https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg?style=flat-square" align="center"/></a>
-
-Run as: `python3 codex.py`
 
 # Common usage:
 
@@ -14,8 +18,8 @@ Run as: `python3 codex.py`
 
     python3 codex.py -w number -of pins.txt -rng 1000
 
-    python3 codex.py -w formnumber9 -of longNums.txt
-
+    python3 codex.py -a /usr/share/wordlists/dirb/common.txt -t web --confirm
+      (One of my favorites.)
 ------------------------------------------------------------------------------------
 
 # The CONF.json file
@@ -42,10 +46,10 @@ Run as: `python3 codex.py`
                     -w /wordlists/newFilename.txt color:noun:formnumber3
                     -w newFilename.txt verb:noun:number
 
-            [?] If you wish to write one word, or two appended words, leave empty parameters.
+            [?] It is no longer necessary that you supply any : for one type.
                 
                 E.g.: [*] These all write the same thing
-                    -w newFilename.txt number:: 
+                    -w newFilename.txt number
                     -w newFilename.txt :number:
                     -w newFilename.txt ::number
 

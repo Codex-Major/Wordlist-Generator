@@ -16,7 +16,7 @@
 
     python3 codex.py -c colors.txt -t color -r -of modifiedColors.txt
 
-    python3 codex.py -w number -of pins.txt -rng 1000
+    python3 codex.py -w formnumber4 -of pins.txt -rng 1000
 
     python3 codex.py -a /usr/share/wordlists/dirb/common.txt -t web --confirm
       (One of my favorites.)

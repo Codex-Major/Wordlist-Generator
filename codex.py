@@ -4,7 +4,6 @@ import platform
 import sys
 import os
 
-
 DICTIONARY = open('DICTIONARY.json')
 CONF = open('CONF.json')
 config = json.load(CONF)
@@ -63,6 +62,7 @@ def bnrO():
 
 __________________________________________codex.py__
 """)
+    
 def bnrC():
     sys.stdout.write("""
     (\       
@@ -78,11 +78,11 @@ def bnrC():
 __________________________________________codex.py__
 """)
     
-
-
-    
 def mnu():
     sys.stdout.write("""
+____________________________________________________
+            --Wordlist-Generator--
+               Codex-Major 2021
 ____________________________________________________
 [$] Menu:
 
@@ -101,9 +101,11 @@ ____________________________________________________
     (e)xit - Exits this tool.
     """)
 
-
 def clihlp():
     sys.stdout.write("""
+                            --Wordlist-Generator--
+                               Codex-Major 2021
+------------------------------------------------------------------------------------
 [?] Commands:\n
         (-h)elp | Gives this output.
         (-t)ype | Type of words that are being parsed.
@@ -159,11 +161,11 @@ def clihlp():
             (-r) | Removes the found words.
 ------------------------------------------------------------------------------------
 Common usage:
-    python3 codex_vX.X.py -c colors.txt -t color -r -of modifiedColors.txt
+    python3 codex.py -c colors.txt -t color -r -of modifiedColors.txt
 
-    python3 codex_vX.X.py -w number -of pins.txt -rng 1000
+    python3 codex.py -w number -of pins.txt -rng 1000
 
-    python3 codex_vX.X.py -w formnumber9 -of longNums.txt 
+    python3 codex.py -w formnumber9 -of longNums.txt 
 
 (-h)elp | Gives this output.
 (-t)ype | Type of words that are being parsed.
@@ -252,7 +254,6 @@ ____________________________________________________
         sys.stdout.write("[!] Exiting!")
         ext()
 
-
 def chk():
     sys.stdout.write("[?] Would you like to check for... \n    (b)adlines or (e)xisting words?\n")
     sys.stdout.write("\n[!] Be sure to check for badlines BEFORE checking for existing words.\n")
@@ -306,7 +307,6 @@ def chk():
                     mnu()
                 if ans1=="q":
                     ext()
-
         if ans=='n':
             mnu()
         if ans=='q':
@@ -361,7 +361,6 @@ def chk():
         badlines()
     if check=='e':
         existing()
-    
     else:
         sys.stdout.write("[!] No such check command!\n")
         chk()
@@ -558,8 +557,7 @@ if __name__ == "__main__":
                 except IndexError:
                     sys.stderr.write("[!] Index error check your previous command.\n")
                 except KeyError:
-                    sys.stderr.write("[!] No list for one of the given wordtypes.\n")
-
+                    sys.stderr.write("[!] No list for one of the given wordtypes.\n")      
             if "-c" in cmdargs[0:]:
                     if "-t" in cmdargs[0:]:
                         wtidx=cmdargs.index("-t")
@@ -609,7 +607,6 @@ if __name__ == "__main__":
                             sys.stdout.write("[*] Done Removing!\n")
                     else:
                         sys.stdout.write("[*] Add the -r option to remove duplicate words.\n")
-
             if "-a" in cmdargs[0:]:
                 aidx=cmdargs.index("-a")
                 try:
